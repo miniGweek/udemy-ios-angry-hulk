@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HideAndSeek" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="angry-hulk-bg" translatesAutoresizingMaskIntoConstraints="NO" id="XlK-je-Gxl">
+                                <rect key="frame" x="-136" y="-213" width="891" height="1046"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0x2-PG-SNd">
+                                <rect key="frame" x="0.0" y="325" width="120" height="80"/>
+                                <state key="normal" title="Hide Blue Hulk"/>
+                                <connections>
+                                    <action selector="clickAndHideBlueHulk:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zKI-u8-psO"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blue-hulk" translatesAutoresizingMaskIntoConstraints="NO" id="bOI-UC-ODw">
+                                <rect key="frame" x="-29" y="140" width="240" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="red-hulk" translatesAutoresizingMaskIntoConstraints="NO" id="xc5-bl-UC2">
+                                <rect key="frame" x="176" y="140" width="240" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTw-7R-rQc">
+                                <rect key="frame" x="241" y="325" width="120" height="80"/>
+                                <state key="normal" title="Hide Red Hulk"/>
+                                <connections>
+                                    <action selector="clickAndHideRedHulk:" destination="BYZ-38-t0r" eventType="touchUpInside" id="le1-8w-J4T"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="angryHulkBackground" destination="XlK-je-Gxl" id="3ii-nx-i1V"/>
+                        <outlet property="blueHulk" destination="bOI-UC-ODw" id="erO-Nt-fPy"/>
+                        <outlet property="hideBlue" destination="0x2-PG-SNd" id="frl-oy-Hm8"/>
+                        <outlet property="hideRed" destination="XTw-7R-rQc" id="DFA-Io-kLc"/>
+                        <outlet property="redHulk" destination="xc5-bl-UC2" id="9pg-Fn-LDJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="271" y="308"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="angry-hulk-bg" width="1600" height="1280"/>
+        <image name="blue-hulk" width="259" height="194"/>
+        <image name="red-hulk" width="247" height="204"/>
+    </resources>
+</document>
